@@ -1,0 +1,511 @@
+<!doctype html>
+<html data-theme="lofi" class="scrolly">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/main/images/logo.png">
+
+    <!-- THE CDN's Libs -->
+    <link rel="stylesheet" href="main\css\skin.css">
+
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/6.5.95/css/materialdesignicons.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/daisyui/4.0.8/full.css"
+        integrity="sha512-J1mzIomC8eajctq6g7TnkvkLDZxo34sNqbIbgCo6cB+0l3eydc3qIvqeGNU2q/dtc8BX2YasKSKIzsytFhEXRQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/x-icon" href="main\images\logo.png">
+
+    <style>
+        body {
+            opacity: 0;
+            transition: opacity 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            font-family: product sans;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+ </style>
+
+    <!-- The End Of CDN's Libs -->
+
+
+    <title>teams | thē fนrthēr</title>
+
+</head>
+
+<body>
+
+
+    <!-- The Header / navigation menu -->
+
+    <!-- The Desktop Screens -->
+
+    <div class="navbar hidden fixed lg:flex backdrop-blur-sm h-5 z-[99] bg-gradient-to-b from-purple-500/[.17] via-transparent" id="navigate">
+        <div class="flex-1">   
+            <img src="main\images\logo.png" class="w-14 ml-20">
+        </div>
+        <div class="sm:flex hidden ">
+            <ul class="menu menu-horizontal">
+                <li class="monosap font-medium text-white swap"><a href="index.html"
+                        class="hover:text-blue-200 hovr">main</a></li>
+                <li class="monosap font-medium text-white"><a href="events.html"
+                        class="hover:text-blue-200 hovr">events</a>
+                </li>
+                <li class="monosap font-medium text-white"><a href="accomodation.html"
+                        class="hover:text-blue-200 hovr">accomodation</a></li>
+                <li class="monosap font-medium text-white"><a class="text-blue-300 hover:text-blue-200 hovr">team</a>
+                </li>
+                <li class="monosap font-medium text-white"><a href="https://forms.gle/MNvFSaA21yUinkJN8"
+                        class="hover:text-blue-200 hovr" target="_blank">reach</a></li>
+                <li class="monosap font-medium disabled tooltip tooltip-bottom mr-5 text-white"
+                    data-tip="live on January">
+                    <a href="#" class="hover:text-blue-200 hovr">Gallery</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- The Mobile Screens -->
+
+    <!-- the mobile menu button -->
+
+    <div class="fixed top-4 right-4 lg:hidden z-[99]">
+        <label tabindex="0" for="sidemenua" class="drawer-button btn btn-circle mr-5 btn glass"
+            style="border: 2px solid rgb(49, 49, 49);"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+            </svg></label>
+    </div>
+
+    <!-- the drawer -->
+
+    <div class="drawer drawer-end">
+        <input id="sidemenua" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+
+        </div>
+        <div class="drawer-side z-[99] active:backdrop-blur-sm">
+            <label for="sidemenua" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="menu p-4 w-80 min-h-full bg-black text-white text-base-content">
+                <li class="monosap font-semibold text-2xl mt-7"><a href="index.html"
+                        class="hover:text-blue-200">main</a></li>
+                        <hr class="border-blue-200 mr-5 ml-4 lg:hidden">
+                <li class="monosap font-semibold text-2xl mt-1"><a href="events.html"
+                        class="hover:text-blue-200">events</a></li>
+                        <hr class="border-blue-200 mr-5 ml-4 lg:hidden">
+                <li class="monosap font-semibold text-2xl mt-1"><a href="accomodation.html"
+                        class="hover:text-blue-200">accomodation</a></li>
+                        <hr class="border-blue-200 mr-5 ml-4 lg:hidden">
+                <li class="monosap font-semibold text-2xl mt-1"><a href="team.html" class="text-blue-300">team</a></li>
+                <hr class="border-blue-600 mr-5 ml-4 lg:hidden">
+                <li class="monosap font-semibold text-2xl mt-1"><a href="https://forms.gle/MNvFSaA21yUinkJN8"
+                        class="hover:text-blue-200" target="_blank">reach</a></li>
+                        <hr class="border-blue-200 mr-5 ml-4 lg:hidden">
+                <li class="monosap font-semibold disabled tooltip tooltip-bottom mr-5 text-2xl"
+                    data-tip="live on January">
+                    <a href="#" class="hover:text-white">Gallery</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!--closes here ---- The Header / navigation menu -->
+
+    <!-- the main area -->
+
+
+
+
+    <div class="flex items-center justify-center min-h-screen bg-black py-48 bg-gradient-to-t from-purple-700/[.17] via-transparent">
+        
+        <div class="flex flex-col">
+
+            <div class="relative isolate px-6 pt-14 lg:px-8">
+                <div class="fixed inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+                  <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#50946F] to-[#4805AE] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+                </div>
+                
+                <div class="fixed inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+                  <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#087772] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+                </div>
+            </div>
+            <div class="flex flex-col mt-8">
+                <!-- Meet the Team -->
+                <div class="container max-w-7xl px-4">
+                    <!-- Section Header -->
+                    <div class="flex flex-wrap justify-center text-center mb-24">
+                        <div class="w-full lg:w-6/12 px-4">
+                            <!-- Header -->
+                            <h1 class="text-blue-200 text-4xl font-bold mb-8">
+                                Meet the Team
+                            </h1>
+                        </div>
+                    </div>
+
+                    <!-- Team Members -->
+                    <div class="flex flex-wrap">
+
+                        <!-- Member #01 -->
+                        <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                            <div class="flex flex-col">
+                                <!-- Avatar -->
+                                <a href="#" class="mx-auto">
+                                    <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                        src="main\team\principal.jpg">
+                                </a>
+
+                                <!-- Details -->
+                                <div class="text-center mt-6">
+                                    <!-- Name -->
+                                    <h1 class="text-blue-300 text-xl font-medium mb-1">
+                                        Dr. Vijaykumar M Devappa
+                                    </h1>
+
+                                    <!-- Title -->
+                                    <div class="text-blue-100 font-light mb-2">
+                                        Event Director
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Member #01 -->
+                        <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                            <div class="flex flex-col">
+                                <!-- Avatar -->
+                                <a href="#" class="mx-auto">
+                                    <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                        src="main\team\chandrakala.jpg">
+                                </a>
+
+                                <!-- Details -->
+                                <div class="text-center mt-6">
+                                    <!-- Name -->
+                                    <h1 class="text-blue-300 text-xl font-medium mb-1">
+                                        Chandrakala Patil
+                                    </h1>
+
+                                    <!-- Title -->
+                                    <div class="text-blue-100 font-light mb-2">
+                                        Overall Head Of Event
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Member #02 -->
+                        <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                            <div class="flex flex-col">
+                                <!-- Avatar -->
+                                <a href="#" class="mx-auto">
+                                    <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                        src="main\team\pratibha.jpg">
+                                </a>
+
+                                <!-- Details -->
+                                <div class="text-center mt-6">
+                                    <!-- Name -->
+                                    <h1 class="text-blue-300 text-xl font-medium mb-1">
+                                        Pratibha kalaskar
+                                    </h1>
+
+                                    <!-- Title -->
+                                    <div class="text-blue-100 font-light mb-2">
+                                        Overall Event Co-ordinator 
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Member #03 -->
+                        <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                            <div class="flex flex-col">
+                                <!-- Avatar -->
+                                <a href="#" class="mx-auto">
+                                    <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                        src="main\team\sharanusir.jpg">
+                                </a>
+
+                                <!-- Details -->
+                                <div class="text-center mt-6">
+                                    <!-- Name -->
+                                    <h1 class="text-blue-300 text-xl font-medium mb-1">
+                                        Sharanabasappa Noola
+                                    </h1>
+
+                                    <!-- Title -->
+                                    <div class="text-blue-100 font-light mb-2">
+                                        Head Of Public Relations
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Member #04 -->
+                        <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                            <div class="flex flex-col">
+                                <!-- Avatar -->
+                                <a href="#" class="mx-auto">
+                                    <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                        src="main\team\dattusir.jpg">
+                                </a>
+
+                                <!-- Details -->
+                                <div class="text-center mt-6">
+                                    <!-- Name -->
+                                    <h1 class="text-blue-300 text-xl font-medium mb-1">
+                                     Dattatraya Raghoji
+                                    </h1>
+
+                                    <!-- Title -->
+                                    <div class="text-blue-100 font-light mb-2">
+                                        Head of Finance
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Member #04 -->
+                        <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                            <div class="flex flex-col">
+                                <!-- Avatar -->
+                                <a href="#" class="mx-auto">
+                                    <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                        src="main\team\mahadevappa.jpg">
+                                </a>
+
+                                <!-- Details -->
+                                <div class="text-center mt-6">
+                                    <!-- Name -->
+                                    <h1 class="text-blue-300 text-xl font-medium mb-1">
+                                     Mahadevappa
+                                    </h1>
+
+                                    <!-- Title -->
+                                    <div class="text-blue-100 font-light mb-2">
+                                        Head of marketing
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Member #06 -->
+                        <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                            <div class="flex flex-col">
+                                <!-- Avatar -->
+                                <a href="#" class="mx-auto">
+                                    <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                        src="main\team\sanni.jpg">
+                                </a>
+
+                                <!-- Details -->
+                                <div class="text-center mt-6">
+                                    <!-- Name -->
+                                    <h1 class="text-blue-300 text-xl font-medium mb-1">
+                                        Sanni Kumar
+                                    </h1>
+
+                                    <!-- Title -->
+                                    <div class="text-blue-100 font-light mb-2">
+                                        Head of Operations and Logistics
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Member #05 -->
+                        <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                            <div class="flex flex-col">
+                                <!-- Avatar -->
+                                <a href="#" class="mx-auto">
+                                    <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                    src="main\team\sumit.jpg">
+                                </a>
+
+                                <!-- Details -->
+                                <div class="text-center mt-6">
+                                    <!-- Name -->
+                                    <h1 class="text-blue-300 text-xl font-medium mb-1">
+                                        Sumit Hibare
+                                    </h1>
+
+                                    <!-- Title -->
+                                    <div class="text-blue-100 font-light mb-2">
+                                        Head Of Web & App
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Member #07 -->
+                        <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                            <div class="flex flex-col">
+                                <!-- Avatar -->
+                                <a href="#" class="mx-auto">
+                                    <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                        src="main\team\somesh.jpg">
+                                </a>
+
+                                <!-- Details -->
+                                <div class="text-center mt-6">
+                                    <!-- Name -->
+                                    <h1 class="text-blue-300 text-xl font-medium mb-1">
+                                        Somesh Hotkar
+                                    </h1>
+
+                                    <!-- Title -->
+                                    <div class="text-blue-100 font-light mb-2">
+                                        Head of creatives
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Member #08 -->
+                        <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                            <div class="flex flex-col">
+                                <!-- Avatar -->
+                                <a href="#" class="mx-auto">
+                                    <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                        src="main\team\buddhi.jpg">
+                                </a>
+
+                                <!-- Details -->
+                                <div class="text-center mt-6">
+                                    <!-- Name -->
+                                    <h1 class="text-blue-300 text-xl font-medium mb-1">
+                                        Vinay Buddhi
+                                    </h1>
+
+                                    <!-- Title -->
+                                    <div class="text-blue-100 font-light mb-2">
+                                        Head of Video Production
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Member #09 -->
+                        <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                            <div class="flex flex-col">
+                                <!-- Avatar -->
+                                <a href="#" class="mx-auto">
+                                    <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                        src="main\team\rohit.jpg">
+                                </a>
+
+                                <!-- Details -->
+                                <div class="text-center mt-6">
+                                    <!-- Name -->
+                                    <h1 class="text-blue-300 text-xl font-medium mb-1">
+                                        Rohit Rathod
+                                    </h1>
+
+                                    <!-- Title -->
+                                    <div class="text-blue-100 font-light mb-2">
+                                        Head of Accommodation
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Member #10 -->
+                        <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                            <div class="flex flex-col">
+                                <!-- Avatar -->
+                                <a href="#" class="mx-auto">
+                                    <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                        src="main\team\sneha.jpg">
+                                </a>
+
+                                <!-- Details -->
+                                <div class="text-center mt-6">
+                                    <!-- Name -->
+                                    <h1 class="text-blue-300 text-xl font-medium mb-1">
+                                        Sneha Mudnal
+                                    </h1>
+
+                                    <!-- Title -->
+                                    <div class="text-blue-100 font-light mb-2">
+                                        Cultural Head
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- the end of main area -->
+
+    <!-- the footer area -->
+
+    <footer class="footer bottom-0 p-10 bg-black text-base-content text-white" style="cursor: pointer;">
+        <aside>
+            <img src="main\images\The.png" class="w-60">
+            <p style="font-family:product sans;">EST 2023</p>
+            </p>
+        </aside>
+        <nav style="font-family:product sans;">
+            <header class="footer-title text-green-300">Connect Us</header>
+            <a href="https://www.instagram.com/thefurther_by_sit/" class="hover:text-blue-200"
+                target="_blank">Instagram</a>
+            <a href="mailto:sithackathon23@gmail.com" class="hover:text-blue-200">sithackathon23@gmail.com</a>
+        </nav>
+        <nav style="font-family:product sans;">
+            <header class="footer-title text-green-300">Supporters</header>
+            <a href="https://sitgulbarga.org/" class="hover:text-blue-200" target="_blank">Shetty Institute Of
+                Technology</a>
+            <a href="https://shettygroupofinstitutions.org/" class="hover:text-blue-200" target="_blank">Shetty Group Of
+                Institutions</a>
+            <a href="https://www.ieee.org/" class="hover:text-blue-200" target="_blank">IEEE</a>
+            <a href="https://inex-india.com/" class="hover:text-blue-200" target="_blank">INEX India</a>
+            <a href="https://www.comedkares.org/" class="hover:text-blue-200" target="_blank">Comed kares</a>
+            <a href="https://be-practical.com/" class="hover:text-blue-200" target="_blank">Be Practical</a>
+        </nav>
+        <nav style="font-family:product sans;">
+            <header class="footer-title text-green-300">Quick links</header>
+            <a href="https://forms.gle/MNvFSaA21yUinkJN8" class="hover:text-blue-200" target="_blank">contact</a>
+            <a href="https://maps.app.goo.gl/1vsYGQXJi3ysTxoYA" class="hover:text-blue-200" target="_blank">map</a>
+            <a class="hover:text-blue-200" target="_blank">become a sponsor</a>
+        </nav>
+    </footer>
+
+    <script src="main\js\anim.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+
+</html>

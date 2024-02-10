@@ -1,0 +1,382 @@
+<!doctype html>
+<html data-theme="lofi" class="scrolly">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/main/images/logo.png">
+
+    <!-- THE CDN's Libs -->
+    <link rel="stylesheet" href="main\css\skin.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/daisyui/4.0.8/full.css"
+        integrity="sha512-J1mzIomC8eajctq6g7TnkvkLDZxo34sNqbIbgCo6cB+0l3eydc3qIvqeGNU2q/dtc8BX2YasKSKIzsytFhEXRQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/x-icon" href="main\images\logo.png">
+
+    <!-- The End Of CDN's Libs -->
+
+    <style>
+        body {
+            opacity: 0;
+            transition: opacity 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            font-family: product sans;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        .center-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 600px) {
+            .center-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                margin-right: 0;
+            }
+
+        }
+
+        .bg-blur {
+            backdrop-filter: blur(15px);
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        /* the self code */
+
+        * {
+            box-sizing: border-box
+        }
+
+        /* Set height of body and the document to 100% */
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            display: none;
+            padding: 100px 20px;
+
+        }
+
+        #Home {
+            background-color: rgb(255, 255, 255);
+        }
+
+        #News {
+            background-color: rgb(255, 255, 255);
+        }
+
+        #Contact {
+            background-color: rgb(255, 255, 255);
+        }
+
+        #About {
+            background-color: rgb(255, 255, 255);
+        }
+    </style>
+
+    <title>events | the further</title>
+
+</head>
+
+<body>
+
+
+    <!-- The Header / navigation menu -->
+
+    <!-- The Desktop Screens -->
+
+    <div class="navbar hidden bg-black lg:flex backdrop-blur-sm backdrop-brightness-50 h-5 bg-gradient-to-t from-purple-500/[.17] via-transparent"
+        id="navigate">
+        <div class="flex-1">
+            <img src="main\images\logo.png" class="w-14 ml-20">
+        </div>
+        <div class="sm:flex hidden ">
+            <ul class="menu menu-horizontal">
+                <li class="monosap font-medium text-white swap"><a href="index.html"
+                        class="hover:text-blue-200 hovr">main</a></li>
+                <li class="monosap font-medium text-white"><a href="events.html"
+                        class="hover:text-blue-200 hover:text-blue-200 hovr">events</a>
+                </li>
+                <li class="monosap font-medium text-white"><a href="accomodation.html"
+                        class="text-blue-300 hover:text-blue-200 hovr">accomodation</a></li>
+                <li class="monosap font-medium text-white"><a href="team.html" class="hover:text-blue-200 hovr">team</a>
+                </li>
+                <li class="monosap font-medium text-white"><a href="https://forms.gle/MNvFSaA21yUinkJN8"
+                        class="hover:text-blue-200 hovr" target="_blank">reach</a></li>
+                <li class="monosap font-medium disabled tooltip tooltip-bottom mr-5 text-white"
+                    data-tip="live on January">
+                    <a href="#" class="hover:text-red-200 hovr">Gallery</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- The Mobile Screens -->
+
+    <!-- the mobile menu button -->
+
+    <div class="fixed top-4 right-4 lg:hidden z-[99]">
+        <label tabindex="0" for="sidemenua" class="drawer-button btn btn-circle mr-5 btn glass"><svg
+                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+            </svg></label>
+    </div>
+
+    <!-- the drawer -->
+
+    <div class="drawer drawer-end">
+        <input id="sidemenua" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+
+        </div>
+        <div class="drawer-side z-[99]">
+            <label for="sidemenua" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="menu p-4 w-80 min-h-full bg-black text-white text-base-content">
+                <li class="monosap font-semibold text-2xl mt-7"><a href="index.html"
+                        class="hover:text-blue-200">main</a></li>
+                <hr class="border-blue-200 mr-5 ml-4 lg:hidden">
+                <li class="monosap font-semibold text-2xl mt-3"><a href="events.html"
+                        class="hover:text-blue-300">events</a>
+                </li>
+                <hr class="border-blue-200 mr-5 ml-4 lg:hidden">
+                <li class="monosap font-semibold text-2xl mt-3"><a href="accomodation.html"
+                        class="text-blue-300">accomodation</a></li>
+                <hr class="border-blue-600 mr-5 ml-4 lg:hidden">
+
+                <li class="monosap font-semibold text-2xl mt-3"><a href="team.html" class="hover:text-blue-200">team</a>
+                </li>
+                <hr class="border-blue-200 mr-5 ml-4 lg:hidden">
+                <li class="monosap font-semibold text-2xl mt-3"><a href="https://forms.gle/MNvFSaA21yUinkJN8"
+                        class="hover:text-blue-200" target="_blank">reach</a></li>
+                <hr class="border-blue-200 mr-5 ml-4 lg:hidden">
+                <li class="monosap font-semibold disabled tooltip tooltip-bottom mr-5 text-2xl"
+                    data-tip="live on January">
+                    <a href="#" class="hover:text-white">Gallery</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--closes here ---- The Header / navigation menu -->
+
+    <!-- the main area -->
+
+    <!-- the mobile tab menu -->
+
+    <div class="dropdown lg:hidden">
+        <label tabindex="0" style="font-family:product sans;"
+            class="btn w-screen lg:hidden text-2xl font-medium">explore</label>
+        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-90 ml-10 mt-5">
+            <li><a onclick="openPage('Home', this,)" class="btn w-80 mb-2 text-xl font-medium ">accomodation
+                    policies</a>
+            </li>
+            <li><a onclick="openPage('News', this,)" class="btn w-80 mb-2 text-xl font-medium">instructions</a></li>
+            <li><a onclick="openPage('Contact', this,)" class="btn w-80 mb-2 text-xl font-medium">reaching SIT</a></li>
+            <li><a onclick="openPage('About', this)" class="btn w-80 text-xl font-medium">contact</a></li>
+        </ul>
+    </div>
+
+    <!-- end of mobile tab menu -->
+
+    <!-- the pc tab menu -->
+
+    <div role="tablist" class="tabs tabs-boxed hidden lg:flex mt-10 ml-10 z-[99]" style="position: absolute;">
+        <input onclick="openPage('Home', this,)" id="defaultOpen" type="radio" name="my_tabs_1" role="tab"
+            class="tab text-xl btn btn glass" aria-label="Accomodation  Policies" checked />
+
+
+        <input onclick="openPage('News', this,)" type="radio" name="my_tabs_1" role="tab"
+            class="tab text-xl btn btn glass" aria-label="Instructions" />
+
+
+        <input onclick="openPage('Contact', this,)" type="radio" name="my_tabs_1" role="tab"
+            class="tab text-xl btn btn glass" aria-label="Reaching SIT" />
+
+        <input onclick="openPage('About', this,)" type="radio" name="my_tabs_1" role="tab"
+            class="tab text-xl btn btn glass" aria-label="Contact" />
+
+    </div>
+
+    <!-- the end of pc tab menu -->
+
+
+    <div id="Home" class="tabcontent text-black mx-auto max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-7xl">
+
+
+
+        <h3 class="text-xl sm:text-4xl text-blue-600">Accommodation Charges</h3>
+        <p class="text-md sm:text-xl lg:mt-7 mt-4 text-gray-700">Accommodation charges are INR 400 per
+            candidate for one day & It does not include food facility. Guest can purchase their meals from the canteen
+            at subsidized rates or can order online from anywhere they want. </p>
+        <br>
+        <p class="text-md sm:text-xl text-gray-700">the last date to book the accommodation is 12th of december</p>
+        <hr class="h-1 mx-auto my-4 border-0 rounded md:my-10 bg-gray-400 mt-10">
+
+        <h3 class="text-xl sm:text-4xl lg:mt-10 mt-10 text-blue-600">Timing</h3>
+        <p class="text-md sm:text-xl lg:mt-7 mt-4 text-gray-700"> Check-in: 8:00 AM to 10:00 PM on your check-in date
+        </p>
+        <hr class="h-1 mx-auto my-4 border-0 rounded md:my-10 bg-gray-400 mt-10">
+
+        <h3 class="text-xl sm:text-4xl lg:mt-10 mt-10 text-blue-600">Cancellation Policy</h3>
+
+        <p class="text-md sm:text-xl lg:mt-7 mt-4 text-gray-700"> There shall be no refunds for cancellation</p>
+
+
+    </div>
+
+    <div id="News" class="tabcontent text-black mx-auto max-w-2xl lg:mt-24 lg:max-w-7xl">
+        <ol>
+            <h3 class="text-xl sm:text-4xl text-blue-600">General Instructions</h3>
+            <li class="text-md sm:text-xl lg:mt-7 mt-4 text-gray-700">1 . All guests will be provided with a mattress.
+                The Further will not
+                provide mattress cover, blankets, or
+                pillows. The guests are encouraged to arrange them on their own (if required), since the weather might
+                get cold during the night.</li>
+
+            <li class="text-md sm:text-xl lg:mt-7 mt-4 text-gray-700">2 .
+                Any commodities issued to the guests would have to be returned in sound condition to the organizers
+                during check-out.
+            </li>
+
+            <li class="text-md sm:text-xl lg:mt-7 mt-4 text-gray-700">3 .
+                Random checks would be made to avoid any illegal stay at the campus. Any team failing to produce their
+                electronic/physical receipts of accommodation would be heavily fined and disqualified.
+            </li>
+
+            <li class="text-md sm:text-xl lg:mt-7 mt-4 text-gray-700">4 .
+                All guests are required to carry their valid government photo ID proofs at all times. In addition, the
+                student participants are also required to carry their valid College photo ID card. Any guest failing to
+                produce their ID card will not be permitted inside the campus during The Further 2023.
+            </li>
+
+            <li class="text-md sm:text-xl lg:mt-7 mt-4 text-gray-700">5 .
+                Alcohol, drugs, sharp objects, and explosives of any kind are strictly prohibited inside the campus. Any
+                other item if deemed unsafe will be prohibited. The decision of Security and The Further team will be
+                final
+                in case of any disputes.
+            </li>
+
+            <li class="text-md sm:text-xl lg:mt-7 mt-4 text-gray-700">6 .
+                All guests are required to maintain the decorum and cleanliness of the campus, and follow the rules of
+                the campus at all times.
+            </li>
+
+
+        </ol>
+    </div>
+
+    <div id="Contact" class="tabcontent text-black mx-auto max-w-2xl lg:mt-24 lg:max-w-7xl">
+        <h3 class="text-xl sm:text-4xl text-blue-600">Reaching Shetty Institute Of Technology</h3>
+
+        <p class="text-md sm:text-xl lg:mt-7 mt-4 text-gray-700">Welcome to the Shetty Institute of Technology, nestled
+            in the vibrant city of Kalburagi, formerly known as
+            Gulbarga. Getting to this educational hub is a breeze, thanks to multiple convenient transportation options.
+        </p>
+        <br>
+        <p class="text-md sm:text-xl text-gray-700">depending upon you travelling and convenience you can reach gulbarga
+            by Bus, train, and airplane.</p>
+        <br>
+        <p class="text-md sm:text-xl text-gray-700">when you get to Kalburagi you can reach shetty Institute of
+            Technology by getting Autorikshaw & Taxi or you own vehicle.</p>
+        <br>
+        <p class="text-md sm:text-xl text-gray-700">
+            the address for the college is, <span class="text-green-600">shetty Institute of Technology shabhad road
+                585105. </span>
+        </p>
+
+        <iframe class="hero mt-10 relative max-w-7xl mx-auto mb-10 rounded-2xl w-11/12"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.567338428934!2d76.86642417491748!3d17.288154705656755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc8eed18134dfdb%3A0xe9c44020d109ad0c!2sShetty%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1700216569072!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div id="About" class="tabcontent text-black mx-auto max-w-2xl lg:mt-24 lg:max-w-7xl">
+        <h3 class="text-xl sm:text-4xl text-blue-600 mb-10">Hospitality Team</h3>
+        <p class="text-xl sm:text-2xl">Somesh hotkar <span>7411049751</span> </p>
+        
+        <p class="text-xl sm:text-2xl mt-5">harish reddy <span>6362960598 </span> </p>
+        
+    </div>
+
+
+
+    <!-- the footer area -->
+
+    <footer class="footer bottom-0 p-10 bg-black text-base-content text-white" style="cursor: pointer;">
+        <aside>
+            <img src="main\images\The.png" class="w-60">
+            <p style="font-family:product sans;">EST 2023</p>
+            </p>
+        </aside>
+        <nav style="font-family:product sans;">
+            <header class="footer-title text-green-300">Connect Us</header>
+            <a href="https://www.instagram.com/thefurther_by_sit/" class="hover:text-blue-200"
+                target="_blank">Instagram</a>
+            <a href="mailto:sithackathon23@gmail.com" class="hover:text-blue-200">sithackathon23@gmail.com</a>
+        </nav>
+        <nav style="font-family:product sans;">
+            <header class="footer-title text-green-300">Supporters</header>
+            <a href="https://sitgulbarga.org/" class="hover:text-blue-200" target="_blank">Shetty Institute Of
+                Technology</a>
+            <a href="https://shettygroupofinstitutions.org/" class="hover:text-blue-200" target="_blank">Shetty Group Of
+                Institutions</a>
+            <a href="https://www.ieee.org/" class="hover:text-blue-200" target="_blank">IEEE</a>
+            <a href="https://inex-india.com/" class="hover:text-blue-200" target="_blank">INEX India</a>
+            <a href="https://www.comedkares.org/" class="hover:text-blue-200" target="_blank">Comed kares</a>
+            <a href="https://be-practical.com/" class="hover:text-blue-200" target="_blank">Be Practical</a>
+        </nav>
+        <nav style="font-family:product sans;">
+            <header class="footer-title text-green-300">Quick links</header>
+            <a href="https://forms.gle/MNvFSaA21yUinkJN8" class="hover:text-blue-200" target="_blank">contact</a>
+            <a href="https://maps.app.goo.gl/1vsYGQXJi3ysTxoYA" class="hover:text-blue-200" target="_blank">map</a>
+            <a class="hover:text-blue-200" target="_blank">become a sponsor</a>
+        </nav>
+    </footer>
+
+    <script src="main\js\anim.js"></script>
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>

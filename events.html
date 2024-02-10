@@ -1,0 +1,364 @@
+<!doctype html>
+<html data-theme="lofi" class="scrolly">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/main/images/logo.png">
+
+    <!-- THE CDN's Libs -->
+    <link rel="stylesheet" href="main\css\skin.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/daisyui/4.0.8/full.css"
+        integrity="sha512-J1mzIomC8eajctq6g7TnkvkLDZxo34sNqbIbgCo6cB+0l3eydc3qIvqeGNU2q/dtc8BX2YasKSKIzsytFhEXRQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/x-icon" href="main\images\logo.png">
+
+    <!-- The End Of CDN's Libs -->
+
+    <style>
+        body {
+            opacity: 0;
+            transition: opacity 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            font-family: product sans;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        .center-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 600px) {
+            .center-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                margin-right: 0;
+            }
+
+        }
+    </style>
+
+    <title>events | the further</title>
+
+</head>
+
+<body>
+
+
+    <!-- The Header / navigation menu -->
+
+    <!-- The Desktop Screens -->
+
+    <div class="navbar hidden fixed lg:flex backdrop-blur-sm backdrop-brightness-50 h-5 z-[99]" id="navigate">
+        <div class="flex-1">
+            <img src="main\images\logo.png" class="w-14 ml-20"> 
+            <!-- <a class="btn btn-sm ml-6 bg-gray-300 hover:bg-green-300 rounded-full">rulebook download</a> -->
+        </div>
+        <div class="sm:flex hidden ">
+            <ul class="menu menu-horizontal">
+                <li class="monosap font-medium text-white swap"><a href="index.html"
+                        class="hover:text-blue-200 hovr">main</a></li>
+                <li class="monosap font-medium text-white"><a href="events.html"
+                        class="text-blue-300 hover:text-blue-200 hovr">events</a>
+                </li>
+                <li class="monosap font-medium text-white"><a href="accomodation.html"
+                        class="hover:text-blue-200 hovr">accomodation</a></li>
+                <li class="monosap font-medium text-white"><a href="team.html" class="hover:text-blue-200 hovr">team</a>
+                </li>
+                <li class="monosap font-medium text-white"><a href="https://forms.gle/MNvFSaA21yUinkJN8"
+                        class="hover:text-blue-200 hovr" target="_blank">reach</a></li>
+                <li class="monosap font-medium disabled tooltip tooltip-bottom mr-5 text-white"
+                    data-tip="live on January">
+                    <a href="#" class="hover:text-blue-200 hovr">Gallery</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- The Mobile Screens -->
+
+    <!-- the mobile menu button -->
+
+    <div class="fixed top-4 right-4 lg:hidden z-[99]">
+        <label tabindex="0" for="sidemenua" class="drawer-button btn btn-circle mr-5 btn glass"><svg
+                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+            </svg></label>
+    </div>
+
+    <!-- <div class="fixed top-4 right-20 lg:hidden z-[99]">
+        <label tabindex="0" class="btn mr-5 rounded-full bg-gray-300">rulebook</label>
+    </div> -->
+
+    <!-- the drawer -->
+
+    <div class="drawer drawer-end">
+        <input id="sidemenua" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+
+        </div>
+        <div class="drawer-side z-[99]">
+            <label for="sidemenua" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="menu p-4 w-80 min-h-full bg-black text-white text-base-content">
+                <li class="monosap font-semibold text-2xl mt-7"><a href="index.html"
+                        class="hover:text-blue-200">main</a></li>
+                <hr class="border-blue-200 mr-5 ml-4 lg:hidden">
+                <li class="monosap font-semibold text-2xl mt-3"><a href="events.html" class="text-blue-300">events</a>
+                </li>
+                <hr class="border-blue-600 mr-5 ml-4 lg:hidden">
+                <li class="monosap font-semibold text-2xl mt-3"><a href="accomodation.html"
+                        class="hover:text-blue-200">accomodation</a></li>
+                <hr class="border-blue-200 mr-5 ml-4 lg:hidden">
+                <li class="monosap font-semibold text-2xl mt-3"><a href="team.html" class="hover:text-blue-200">team</a>
+                </li>
+                <hr class="border-blue-200 mr-5 ml-4 lg:hidden">
+                <li class="monosap font-semibold text-2xl mt-3"><a href="https://forms.gle/MNvFSaA21yUinkJN8"
+                        class="hover:text-blue-200" target="_blank">reach</a></li>
+                <hr class="border-blue-200 mr-5 ml-4 lg:hidden">
+                <li class="monosap font-semibold disabled tooltip tooltip-bottom mr-5 text-2xl"
+                    data-tip="live on January">
+                    <a href="#" class="hover:text-white">Gallery</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!--closes here ---- The Header / navigation menu -->
+
+    <!-- the main area -->
+
+    <section class="hero min-h-screen"
+        style="background-image: url(https://images.unsplash.com/photo-1599739291060-4578e77dac5d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); background-repeat: no-repeat; background-size: cover; ">
+
+
+        <div class="center-container mt-40 sm:mt-2">
+
+            <div class="card bg-base-100 shadow-xl mb-5 image-full shadow-2xl lg:mr-3">
+                <figure><img src="https://miro.medium.com/v2/resize:fit:1024/0*rnYWcmRH4KbfCWzt.png" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title font-medium">Epicthon<div class="badge bg-yellow-200">25K Pool</div>
+                    </h2>
+                    <p class="mt-2">Break, Blend & Build Hackthon Challenge</p>
+                    <div class="card-actions justify-end">
+                        <a target="_blank" href="main/docs/problem_statements.pdf"
+                            class="btn font-medium bg-green-300 text-black">Problem Statements</a>
+                        <a target="_blank" href="main/docs/epicthon.pdf"
+                            class="btn font-medium bg-green-300 text-black">Rulebook</a>
+                        <a target="_blank" href="https://forms.gle/iR81gNX4WbdthkGD6"
+                            class="btn font-medium btn glass hover:bg-green-300 text-white hover:text-black">Register</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-base-100 shadow-xl mb-5 image-full shadow-2xl lg:mr-3">
+                <figure><img
+                        src="https://cdn-1.motorsport.com/static/img/amp/5200000/5280000/5284000/5284700/5284750/s6_1000486/1000486.jpg" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title font-medium">Obsta Race<div class="badge bg-green-300">Announced</div>
+                    </h2>
+                    <p>compete among the competors for the intense racing competition.</p>
+                    <div class="card-actions justify-end">
+                        <a target="_blank" href="main/docs/obstarace.pdf"
+                            class="btn font-medium bg-green-300 text-black">Download Rulebook</a>
+                        <a href="https://forms.gle/ANQXuxhWwg6nHVuA6" target="_blank" class="btn font-medium btn glass hover:bg-green-300 text-white hover:text-black"
+                            >Register</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card bg-base-100 shadow-xl mb-5 image-full shadow-2xl">
+                <figure><img
+                        src="https://storage.googleapis.com/sproboticworks/master/assets/images/marketing/events/lulu/soccer.jpg" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title font-medium">Robosoccer <div class="badge bg-green-300">Announced</div>
+                    </h2>
+                    <p>build your own robosoccer bots and compete among the players to win</p>
+                    <div class="card-actions justify-end">
+                        <a target="_blank" href="main/docs/robosoccer.pdf"
+                            class="btn font-medium bg-green-300 text-black">Download Rulebook</a>
+                        <a href="https://forms.gle/Z3amX2RgzgiYazaDA" target="_blank" class="btn font-medium btn glass hover:bg-green-300 text-white hover:text-black">Register</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-base-100 shadow-xl mb-5 image-full shadow-2xl lg:mr-3">
+                <figure><img
+                        src="https://media.istockphoto.com/id/1344939844/photo/hand-holding-drawing-virtual-lightbulb-with-brain-on-bokeh-background-for-creative-and-smart.jpg?s=612x612&w=0&k=20&c=2GLUy6eqCSr0NFRO8CHm8_PUMy9Qc8ryqcsRoe0DEYM=" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title font-medium">The Innovation Expo <div class="badge bg-red-300">offline</div>
+                    </h2>
+                    <p>Innovate today, Transform tommorow Embrace the top gripping Challenge </p>
+                    <div class="card-actions justify-end">
+                        <button class="btn font-medium btn glass hover:bg-red-300">upcomming</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- the timeline details section -->
+
+    <section>
+        <div class="bg-black text-white py-8 bg-gradient-to-b from-purple-800/[.35] via-transparent">
+            <div class="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
+                <div class="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
+                    <p class="ml-2 text-yellow-300 uppercase tracking-loose">Working Process</p>
+                    <p class="text-3xl md:text-4xl leading-normal md:leading-relaxed">Working Process of <br> <a
+                            href="index.html" class="text-2xl text-yellow-300" style="font-family: product sans;">the
+                            further'23</a> ⨍est</p>
+                    <p class="text-sm md:text-base text-gray-50 mb-4">
+                        Here’s your guide to thefest process. Go
+                        through all the steps to know the exact
+                        process of the
+                        fest.
+                    </p>
+                    <!-- <a href="#"
+                        class="bg-transparent mr-auto hover:bg-yellow-300 text-yellow-300 hover:text-black hover:font-semibold rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent">
+                        Read Guidebook in detailed</a> -->
+                </div>
+                <div class="ml-0 md:ml-12 lg:w-2/3 sticky">
+                    <div class="container mx-auto w-full h-full">
+                        <div class="relative wrap overflow-hidden p-10 h-full">
+                            <div class="border-2-2 border-yellow-555 absolute h-full border"
+                                style="right: 50%; border: 2px solid #FFC100; border-radius: 1%;"></div>
+                            <div class="border-2-2 border-yellow-555 absolute h-full border"
+                                style="left: 50%; border: 2px solid #FFC100; border-radius: 1%;"></div>
+                            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                                <div class="order-1 w-5/12"></div>
+                                <div class="order-1 w-5/12 px-1 py-4 text-right">
+                                    <p class="mb-3 text-base text-yellow-300">25th November - 5th December, 2023</p>
+                                    <h4 class="mb-3 font-semibold text-lg md:text-2xl text-blue-300">Registration</h4>
+                                    <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+                                        Pick your favourite event(s) and register in that event by filling the form
+                                        corresponding to that
+                                        event. Its that easy :)
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                                <div class="order-1 w-5/12"></div>
+                                <div class="order-1  w-5/12 px-1 py-4 text-left">
+                                    <p class="mb-3 text-base text-yellow-300">18th December, 2023</p>
+                                    <h4 class="mb-3 font-semibold text-lg md:text-2xl text-blue-300">Day One</h4>
+                                    <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+                                        the arrival registerations, speech by college president, seminar by
+                                        dignitaries, detailed infromation about the competition.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                                <div class="order-1 w-5/12"></div>
+                                <div class="order-1 w-5/12 px-1 py-4 text-right">
+                                    <p class="mb-3 text-base text-yellow-300"> 19th December, 2023</p>
+                                    <h4 class="mb-3 font-semibold text-lg md:text-2xl text-blue-300">Day Two</h4>
+                                    <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+                                        the begining of the Hackathon and other organised competitions and events.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                                <div class="order-1 w-5/12"></div>
+
+                                <div class="order-1  w-5/12 px-1 py-4">
+                                    <p class="mb-3 text-base text-yellow-300">20th December, 2023</p>
+                                    <h4 class="mb-3 font-semibold text-blue-300 text-lg md:text-2xl text-left">Day Three
+                                    </h4>
+                                    <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+                                        visiting of judges and explainations of the participants about their solution to
+                                        the problem statements along with visiting hours for the public.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                                <div class="order-1 w-5/12"></div>
+                                <div class="order-1 w-5/12 px-1 py-4 text-right">
+                                    <p class="mb-3 text-base text-yellow-300"> 21st December, 2023</p>
+                                    <h4 class="mb-3 font-semibold text-lg md:text-2xl text-blue-300">Day Four</h4>
+                                    <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+                                        speech by the judges, pannel discussion on various important topics, result
+                                        announcements and certificate, medal along with prize distribution.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-ghost text-2xl px-5 text-white font-medium w-auto lg:ml-60 mt-7"><span
+                                class="text-red-300 lg:mt-2 hovr" style="font-family: product sans;">the further</span>
+                            event for this year ends.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- the end of main area -->
+
+    <!-- the footer area -->
+
+    <footer class="footer p-10 bg-black text-base-content text-white" style="cursor: pointer;">
+        <aside>
+            <img src="main\images\The.png" class="w-60">
+            <p style="font-family:product sans;">EST 2023</p>
+            </p>
+        </aside>
+        <nav style="font-family:product sans;">
+            <header class="footer-title text-green-300">Connect Us</header>
+            <a href="https://www.instagram.com/thefurther_by_sit/" class="hover:text-blue-200"
+                target="_blank">Instagram</a>
+            <a href="mailto:sithackathon23@gmail.com" class="hover:text-blue-200">sithackathon23@gmail.com</a>
+        </nav>
+        <nav style="font-family:product sans;">
+            <header class="footer-title text-green-300">Supporters</header>
+            <a href="https://sitgulbarga.org/" class="hover:text-blue-200" target="_blank">Shetty Institute Of
+                Technology</a>
+            <a href="https://shettygroupofinstitutions.org/" class="hover:text-blue-200" target="_blank">Shetty Group Of
+                Institutions</a>
+            <a href="https://www.ieee.org/" class="hover:text-blue-200" target="_blank">IEEE</a>
+            <a href="https://inex-india.com/" class="hover:text-blue-200" target="_blank">INEX India</a>
+            <a href="https://www.comedkares.org/" class="hover:text-blue-200" target="_blank">Comed kares</a>
+            <a href="https://be-practical.com/" class="hover:text-blue-200" target="_blank">Be Practical</a>
+        </nav>
+        <nav style="font-family:product sans;">
+            <header class="footer-title text-green-300">Quick links</header>
+            <a href="https://forms.gle/MNvFSaA21yUinkJN8" class="hover:text-blue-200" target="_blank">contact</a>
+            <a href="https://maps.app.goo.gl/1vsYGQXJi3ysTxoYA" class="hover:text-blue-200" target="_blank">map</a>
+            <a class="hover:text-blue-200" target="_blank">become a sponsor</a>
+        </nav>
+    </footer>
+
+    <script src="main\js\anim.js"></script>
+
+</body>
+
+</html>

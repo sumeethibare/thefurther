@@ -1,0 +1,300 @@
+<!doctype html>
+<html data-theme="lofi" class="scrolly">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Further 1.0, SIT Kalburagi's Largest Fest.">
+    <meta name="keywords" content="further, thefurther, thefurther by sit">
+    <meta name="author" content="Sumit Hibare">
+
+     <!-- Open Graph Meta Tags -->
+     <meta property="og:title" content="The Further By SIT">
+     <meta property="og:description" content="The Further 1.0, SIT Kalburagi's Largest Fest.">
+     <meta property="og:image" content="main\images\logo.png">
+     <meta property="og:url" content="https://www.thefurther.in">
+     <meta property="og:type" content="website">
+     <meta property="og:locale" content="en_US">
+ 
+     <!-- Canonical URL -->
+     <link rel="canonical" href="https://www.thefurther.in">
+
+    <!-- THE CDN's Libs -->
+    <link rel="stylesheet" href="main\css\skin.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/daisyui/4.0.8/full.css"
+        integrity="sha512-J1mzIomC8eajctq6g7TnkvkLDZxo34sNqbIbgCo6cB+0l3eydc3qIvqeGNU2q/dtc8BX2YasKSKIzsytFhEXRQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/x-icon" href="main\images\logo.png">
+
+    <!-- The End Of CDN's Libs -->
+
+    <style>
+        body {
+            opacity: 0;
+            transition: opacity 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ_JrHxDdL3sAjlfN5j74sS8wl_neqLfmBHLgJ5jkhGyV7uBudWqx5LARJ2sEuKCrDwfRSnnMoO6VClHw8RS8-9R1rE-KtmOtcf6ED1ct2xtcDyFn7MTuQpM_CPBm6s46IPTpkqcmpWIQzyPHSeTEhQyN-W-0Z3V0vFqeO69o-eLiWzP7tfgAlXsdbXQ/s3840/PIXEL-CITY-1292023.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: blur(2px);
+            z-index: -1;
+
+        }
+    </style>
+
+    <title>main | the further</title>
+
+</head>
+
+<body>
+
+
+    <!-- The Header / navigation menu -->
+
+    <!-- The Desktop Screens -->
+
+    <div class="navbar hidden fixed lg:flex backdrop-blur-sm backdrop-brightness-50 h-5 z-[99]" id="navigate">
+        <div class="flex-1">
+            <img src="main\images\logo.png" class="w-14 ml-20">
+        </div>
+        <div class="sm:flex hidden ">
+            <ul class="menu menu-horizontal">
+                <li class="monosap font-medium text-white swap"><a href="index.html"
+                        class="text-blue-300 hover:text-blue-200 hovr">main</a></li>
+                <li class="monosap font-medium text-white"><a href="events.html"
+                        class="hover:text-blue-200 hovr">events</a></li>
+                <li class="monosap font-medium text-white"><a href="accomodation.html"
+                        class="hover:text-blue-200 hovr">accomodation</a></li>
+                <li class="monosap font-medium text-white"><a href="team.html" class="hover:text-blue-200 hovr">team</a>
+                </li>
+                <li class="monosap font-medium text-white"><a href="https://forms.gle/MNvFSaA21yUinkJN8"
+                        class="hover:text-blue-200 hovr" target="_blank">reach</a></li>
+                <li class="monosap font-medium disabled tooltip tooltip-bottom mr-5 text-white"
+                    data-tip="live on January">
+                    <a href="#" class="hover:text-red-200 hovr">Gallery</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- The Mobile Screens -->
+
+    <!-- the mobile menu button -->
+
+    <div class="fixed top-4 right-4 lg:hidden z-[99]">
+        <label tabindex="0" for="sidemenua" class="drawer-button btn btn-circle mr-5 btn glass"><svg
+                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+            </svg></label>
+    </div>
+
+    <!-- the drawer -->
+
+    <div class="drawer drawer-end">
+        <input id="sidemenua" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+
+        </div>
+
+        <div class="drawer-side z-[99]">
+            <label for="sidemenua" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="menu p-4 w-80 min-h-full bg-black text-white text-base-content">
+                <li class="monosap font-semibold text-2xl mt-7"><a href="index.html"
+                        class="text-blue-300 hover:text-blue-200">main</a>
+                </li>
+                <hr class="border-blue-600 mr-5 ml-4 lg:hidden">
+                <li class="monosap font-semibold text-2xl mt-3"><a href="events.html"
+                        class="hover:text-blue-200">events</a></li>
+                <hr class="border-blue-200 mr-5 ml-4 lg:hidden">
+
+                <li class="monosap font-semibold text-2xl mt-3"><a href="accomodation.html"
+                        class="hover:text-blue-200">accomodation</a></li>
+                <hr class="border-blue-200 mr-5 ml-4 lg:hidden">
+
+                <li class="monosap font-semibold text-2xl mt-3"><a href="team.html" class="hover:text-blue-200">team</a>
+                </li>
+                <hr class="border-blue-200 mr-5 ml-4 lg:hidden">
+
+                <li class="monosap font-semibold text-2xl mt-3"><a href="https://forms.gle/MNvFSaA21yUinkJN8"
+                        class="hover:text-blue-200" target="_blank">reach</a></li>
+                <hr class="border-blue-200 mr-5 ml-4 lg:hidden">
+
+                <li class="monosap font-semibold disabled tooltip tooltip-bottom mr-5 text-2xl"
+                    data-tip="live on January">
+                    <a href="#" class="hover:text-white">Gallery</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!--closes here ---- The Header / navigation menu -->
+
+
+    <!-- the main starts here / heros -->
+
+    <section class="hero min-h-screen">
+
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+            <div class="mr-auto place-self-center lg:col-span-7">
+                <div class="flex flex-row items-center">
+                    <img src="https://sitgulbarga.org/wp-content/uploads/2021/10/WhatsApp-Image-2021-06-21-at-10.32.23-AM-removebg.png"
+                        class="w-16 sm:w-24 lg:mt-14 mt-12">
+                    <div class="w-7 h-7 mt-10 text-blue-300 hover:text-purple-400 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+                    <img src="main\images\rmico.png" class="lg:h-20 h-16 lg:36 sm:w-60 mt-12">
+                </div>
+
+                <h1
+                    class="max-w-2xl mb-4 text-5xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-8xl text-blue-200 mt-2">
+                    A TRIP TO THE <br>
+
+                    <a href="" class="typewrite font-bold text-5xl tracking-tight leading-none md:text-5xl xl:text-8xl"
+                        style="font-family: product sans;" data-period="2000"
+                        data-type='[ "future", "Epicthon", "Ideathon" ]'>
+                        <span class="wrap"></span>
+                    </a>
+                </h1>
+
+                <p class="max-w-2xl mb-6 font-medium text-gray-500 lg:mb-8 md:text-lg lg:text-2xl text-green-300"
+                    style="font-family:product sans;">18th - 21st December 2023</p>
+                <a href="events.html"
+                    class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-black rounded-full clicko bg-blue-200"
+                    style="font-family:product sans;">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- the main ends here / heros -->
+
+
+    <!-- The brands area -->
+
+    <div class="py-20 sm:py-20 bg-black bg-gradient-to-b from-purple-700/[.17] via-transparent">
+        <div class="mx-auto max-w-8xl px-6 lg:px-8 items-center">
+            <h2 class="text-center text-xl font-medium leading-8 text-white" style="font-family:product sans;">
+                Powered By</h2>
+            <hr class="w-14 m-auto mt-2">
+            <div
+                class="mx-auto mt-10 grid max-w-lg lg:grid-cols-4 lg:gap-x-8 lg:gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5 lg:ml-10 flex flex-wrap items-center justify-center">
+                <img class="col-span-2 object-contain lg:col-span-1 h-40 w-40 brand-img"
+                    src="https://shettygroupofinstitutions.org/wp-content/uploads/2022/07/SGi-Logo-512x512_PNG-2.png">
+                <img class="col-span-2 object-contain lg:col-span-1 h-40 w-40 brand-img"
+                    src="https://sitgulbarga.org/wp-content/uploads/2021/10/WhatsApp-Image-2021-06-21-at-10.32.23-AM-removebg.png">
+                <img class="col-span-2 object-contain lg:col-span-1 h-40 w-40 brand-img"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/IEEE_logo.svg/1200px-IEEE_logo.svg.png">
+                <img class="col-span-2 object-contain sm:col-start-2 lg:col-span-1 h-40 w-40 brand-img"
+                    src="https://inex-india.com/assets/img/inex_logo_nav.png">
+                <img class="col-span-2 object-contain sm:col-start-2 lg:col-span-1 h-40 w-40 brand-img"
+                    src="https://www.comedkares.org/wp-content/uploads/2023/04/Comedkares-Logo-EPS.png">
+                <img class="col-span-2 object-contain sm:col-start-2 lg:col-span-1 h-40 w-40 brand-img"
+                    src="https://be-practical.com/images/Be-logo.png">
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="py-20 sm:py-20 bg-black">
+        <div class="mx-auto max-w-8xl px-6 lg:px-8 items-center">
+            <h2 class="text-center text-xl font-medium leading-8 text-white" style="font-family:product sans;">
+                Brought To You By</h2>
+            <hr class="w-28 m-auto mt-2">
+            <div class="mx-auto mt-10 grid items-center justify-center">
+                <img class="col-span-2 object-contain sm:col-start-2 lg:col-span-1 h-40 w-40 brand-img"
+                    src="main\brands\tic.png">
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- the end of brands area -->
+
+    <!-- the maps area -->
+    <div class="py-20 bg-black bg-gradient-to-t from-purple-500/[.17] via-transparent">
+        <h2 class="text-center text-xl font-medium leading-8 text-white" style="font-family:product sans;">
+            Locate Shetty Institute Of Technology</h2>
+        <hr class="w-14 m-auto mt-2">
+        <iframe class="mt-10 relative max-w-7xl mx-auto mb-10 rounded-2xl w-11/12"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.567338428934!2d76.86642417491748!3d17.288154705656755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc8eed18134dfdb%3A0xe9c44020d109ad0c!2sShetty%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1700216569072!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- the end of maps -->
+
+    <!-- the footer area -->
+
+    <footer class="footer p-10 bg-black text-base-content text-white" style="cursor: pointer;">
+        <aside>
+            <img src="main\images\The.png" class="w-60">
+            <p style="font-family:product sans;">EST 2023</p>
+            </p>
+        </aside>
+        <nav style="font-family:product sans;">
+            <header class="footer-title text-green-300">Connect Us</header>
+            <a href="https://www.instagram.com/thefurther_by_sit/" class="hover:text-blue-200"
+                target="_blank">Instagram</a>
+            <a href="mailto:sithackathon23@gmail.com" class="hover:text-blue-200">sithackathon23@gmail.com</a>
+        </nav>
+        <nav style="font-family:product sans;">
+            <header class="footer-title text-green-300">Supporters</header>
+            <a href="https://sitgulbarga.org/" class="hover:text-blue-200" target="_blank">Shetty Institute Of
+                Technology</a>
+            <a href="https://shettygroupofinstitutions.org/" class="hover:text-blue-200" target="_blank">Shetty Group Of
+                Institutions</a>
+            <a href="https://www.ieee.org/" class="hover:text-blue-200" target="_blank">IEEE</a>
+            <a href="https://inex-india.com/" class="hover:text-blue-200" target="_blank">INEX India</a>
+            <a href="https://www.comedkares.org/" class="hover:text-blue-200" target="_blank">Comed kares</a>
+            <a href="https://be-practical.com/" class="hover:text-blue-200" target="_blank">Be Practical</a>
+            
+        </nav>
+        <nav style="font-family:product sans;">
+            <header class="footer-title text-green-300">Quick links</header>
+            <a href="https://forms.gle/MNvFSaA21yUinkJN8" class="hover:text-blue-200" target="_blank">contact</a>
+            <a href="https://maps.app.goo.gl/1vsYGQXJi3ysTxoYA" class="hover:text-blue-200" target="_blank">map</a>
+            <a class="hover:text-blue-200" target="_blank">become a sponsor</a>
+        </nav>
+    </footer>
+
+    <!-- the javascript area -->
+
+    <script src="main\js\anim.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+</body>
+
+</html>
